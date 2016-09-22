@@ -1,6 +1,23 @@
 <% include header %>
 
   <h1><%-title %></h1>
-  <p>Welcome to <%-title %></p>
+
+  <div class="login-page">
+    <div class="form">
+      <form class="login-form" method="post" action="/users/sigin/">
+        <input type="text" placeholder="E-mail" name="email" required/>
+        <input type="password" placeholder="Contraseña" name="pass" required/>
+        <input type="hidden" name="url" value="/users/success" required/>
+        <button>Login</button>
+        <p class="message">estás registrado? <a href="#">Crear una cuenta</a></p>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    $('.message a').click(function(){
+      $('form').animate({height: "toggle", opacity: "toggle"}, "slow");
+    });
+  </script>
 
 <% include footer %>
