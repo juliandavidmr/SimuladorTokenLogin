@@ -4,10 +4,10 @@
 
   <div class="login-page">
     <div class="form">
-      <form class="login-form" method="post" action="/users/sigin/">
-        <input type="text" placeholder="E-mail" name="email" required/>
-        <input type="password" placeholder="Contraseña" name="pass" required/>
-        <input type="hidden" name="url" value="/users/success" required/>
+      <form class="login-form" method="get" action="/users/sigin">
+        <input type="text" placeholder="E-mail" id="email" name="email" required/>
+        <input type="password" placeholder="Contraseña" id="pass" name="pass" required/>
+        
         <button>Login</button>
         <p class="message">estás registrado? <a href="#">Crear una cuenta</a></p>
       </form>
