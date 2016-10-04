@@ -1,23 +1,37 @@
 <% include header %>
 
-  <h1><%-title %></h1>
+  <h1><%- title %></h1>
 
   <div class="login-page">
+    <table border="1">
+      <tr>
+        <td>
+          ID Aplicacion
+        </td>
+        <td>
+          Redirige
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <%= id_app %>
+        </td>
+        <td>
+          <%= redirect %>
+        </td>
+      </tr>
+    </table>
+    <br/>
     <div class="form">
       <form class="login-form" method="get" action="/users/sigin">
         <input type="text" placeholder="E-mail" id="email" name="email" required/>
         <input type="password" placeholder="Contraseña" id="pass" name="pass" required/>
+        <input type="hidden" name="idapp" value="<%= id_app %>" required/>
+        <input type="hidden" name="redirect" value="<%= redirect %>" required/> 
         
-        <button>Login</button>
-        <p class="message">estás registrado? <a href="#">Crear una cuenta</a></p>
+        <button type="submit">Login</button>        
       </form>
     </div>
   </div>
-
-  <script>
-    $('.message a').click(function(){
-      $('form').animate({height: "toggle", opacity: "toggle"}, "slow");
-    });
-  </script>
 
 <% include footer %>
