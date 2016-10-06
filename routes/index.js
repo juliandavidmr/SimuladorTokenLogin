@@ -4,9 +4,9 @@ var router = express.Router();
 /* GET home page. */
 
 router.get('/', (req, res) => {
-  res.render('index', { 
-    title: 'Simulador Login'
-  });
+  res.json({
+    msg: 'Bienvenido al simulador de token login.'
+  })
 });
 
 module.exports = router;
