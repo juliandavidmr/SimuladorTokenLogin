@@ -15,6 +15,10 @@ var list = [
     user: 'jo.bermeo@udla.edu.co',
     pass: '1a2b3c',
     key: Math.random() * 10000000000
+  }, {
+    user: 'kel.ponte@udla.edu.co',
+    pass: '1a2b3x',
+    key: Math.random() * 10000000000
   }
 ]
 
@@ -27,6 +31,7 @@ module.exports = {
           resolve(item);
         }
       });
+      reject(true);
     });
   }
 }
