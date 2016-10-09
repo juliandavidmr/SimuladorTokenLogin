@@ -8,8 +8,8 @@ router.get('/', (req, res) => {
     list: [{
       title: 'Votaciones',
       desc: 'I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively',
-      id_client: 23334,
-      redirect: 'http://www.votaciones.com'
+      id_client: 23471,
+      redirect: 'http://gustavocortes-001-site1.htempurl.com/Views/pruebajulian.aspx'
     }, {
       title: 'Visibilidad',
       desc: 'I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively',
